@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:9000";
+const API_URL = "https://viva-questions.herokuapp.com";
 
 // fetch subject list 
 export const getSubjectList = async ({ }) => {
