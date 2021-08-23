@@ -18,9 +18,10 @@ const Questions = (props: any) => {
   const submitAnswer = ()=>
   {
     
-    if(answer == '' && showForm == true) {
-      alert("Answer field can't be empty !")
+    if(answer == '' && showForm == true || author == '') {
+      alert("Input field can't be empty !")
     } else {
+ 
       mutation.mutate({'id': uuidv4(), answer, 'author': author, questionId: props.data.id})
     }
   }

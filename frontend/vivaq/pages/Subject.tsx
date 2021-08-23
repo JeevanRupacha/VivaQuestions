@@ -34,10 +34,16 @@ const Subject = () => {
 
   const submitQuestion = ()=>
   {
+  
+    if (question == '' || author == '') {
+    alert("Input Fields Can't be Empty !")
+    } else {
+      
+    mutation.mutate({ 'id': uuidv4(), question, 'author': author, subjectId: router.query.id })
+    // console.log(props.data)
     setQuestion('')
     setAuthor('')
-    // console.log(props.data)
-    mutation.mutate({'id': uuidv4(), question, 'author': author, subjectId: router.query.id})
+  }  
   }
 
   const questionForm = () => {

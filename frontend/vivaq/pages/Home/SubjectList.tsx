@@ -59,7 +59,7 @@ const SubjectList = () => {
         {
         data != null && typeof data != 'undefined' ?
         data.map( (subject: any) => {
-        return (<div onClick={() => onClickSubject(subject)} className="hover:bg-gray-50 w-full text-gray-800 cursor-pointer block pl-4 pt-1 pb-3 text-3xl rounded-sm ">{subject.title}</div>)
+        return (<div onClick={() => onClickSubject(subject)} className="hover:bg-gray-50 w-full text-center text-gray-800 cursor-pointer block pl-4 pt-1 pb-3 text-3xl rounded-sm ">{subject.title}</div>)
       }) : <div><h1>No Data </h1></div>
         }
         
