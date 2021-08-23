@@ -109,7 +109,7 @@ const Subject = () => {
         {
           data != null && typeof data != "undefined" ?
             data.map((question: any) => {
-              return <Questions data={question}/>
+              return <Questions key={question.id} data={question}/>
               // console.log(question)
             }) : null
         }

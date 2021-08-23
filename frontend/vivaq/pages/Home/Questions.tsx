@@ -86,7 +86,7 @@ const Questions = (props: any) => {
         {
           data != null && typeof data != "undefined" ?
             data.map((answer: any) => {
-              return <Answers data={answer}/>
+              return <Answers key={answer.id} data={answer}/>
             }) : null
         }
         <div className={showForm ? "visible": "hidden"}>
