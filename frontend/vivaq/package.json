@@ -1,0 +1,27 @@
+{
+  "name": "vivaq",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "11.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "react-query": "^3.21.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.19",
+    "@types/uuid": "^8.3.1",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.0",
+    "tailwindcss": "^2.2.7",
+    "typescript": "4.3.5"
+  }
+}
