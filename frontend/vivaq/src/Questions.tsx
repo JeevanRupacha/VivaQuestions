@@ -1,7 +1,7 @@
 import React , {useState, useRef} from 'react'
 import Answers from './Answers'
 import { useQuery } from 'react-query'
-import { getAnswers, addAnswer } from '../../src/api'
+import { getAnswers, addAnswer } from './api'
 import { useMutation ,useQueryClient} from 'react-query'
 import {v4 as uuidv4} from 'uuid'
 
@@ -11,6 +11,8 @@ const Questions = (props: any) => {
   const [show, setShow] = useState(false)
   const [showForm, setForm] = useState(false)
   const submitBtnRef = useRef<HTMLButtonElement>(null)
+  const questionId = props.data.id
+  console.log("questionud", questionId)
 
   const [answer, setAnswer] = useState('')
   const [author,setAuthor] = useState('')
@@ -22,7 +24,7 @@ const Questions = (props: any) => {
       alert("Input field can't be empty !")
     } else {
  
-      mutation.mutate({'id': uuidv4(), answer, 'author': author, questionId: props.data.id})
+      mutation.mutate({'id': uuidv4(), answer, 'author': author, questionId})
     }
   }
 
@@ -86,7 +88,7 @@ const Questions = (props: any) => {
         {
           data != null && typeof data != "undefined" ?
             data.map((answer: any) => {
-              return <Answers key={answer.id} data={answer}/>
+              return <Answers key={uuidv4()} data={answer}/>
             }) : null
         }
         <div className={showForm ? "visible": "hidden"}>

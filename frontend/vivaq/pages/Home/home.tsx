@@ -1,4 +1,4 @@
-import Questions from './Questions'
+import Questions from '../../src/Questions'
 import SubjectList from './SubjectList'
 import Subject from '../Subject'
 import Header from './Header'

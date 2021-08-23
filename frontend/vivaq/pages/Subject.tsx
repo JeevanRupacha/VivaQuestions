@@ -1,4 +1,4 @@
-import Questions from './Home/Questions'
+import Questions from '../src/Questions'
 import {useQuery} from 'react-query'
 import Header from './Home/Header'
 import { useRouter } from 'next/router'
@@ -109,7 +109,7 @@ const Subject = () => {
         {
           data != null && typeof data != "undefined" ?
             data.map((question: any) => {
-              return <Questions key={question.id} data={question}/>
+              return <Questions key={uuidv4()} data={question}/>
               // console.log(question)
             }) : null
         }
